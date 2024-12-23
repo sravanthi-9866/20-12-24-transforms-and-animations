@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.c,
+.a {
+    padding: 20px;
+}
+
+.box {
+    text-align: center;
+}
+
+body {
+    margin: 20px;
+}
+
+.puppy {
+    margin: 100px;
+    transition: 0.4s ease;
+}
+
+.c1:active~.puppy{
+    transform: translate(50px, 50px);
+}
+
+.c2:active ~.puppy {
+    transform: scale(1.2);
+}
+
+.c3:active ~.puppy {
+    transform: rotate(360deg);
+}
+
+.c4:active ~.puppy {
+    transform: skew(20deg);
+}
+
+.fan {
+    margin: 30px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+i {
+    font-size: 100px;
+    transition: transform 1s linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.a1:hover ~.fan {
+    animation: rotate 3s linear infinite;
+}
+
+.a2:hover ~.fan {
+    animation: rotate 2s linear infinite;
+}
+
+.a3:hover ~.fan {
+    animation: rotate 1s linear infinite;
+}
+
+.a4:hover ~.fan {
+    animation: rotate 0.5s linear infinite;
+}
